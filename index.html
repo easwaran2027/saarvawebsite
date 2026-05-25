@@ -200,6 +200,82 @@
       color: var(--primary);
     }
 
+    .about-hero {
+      padding: 26px 0 14px;
+    }
+
+    .about-hero-card {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      min-height: 620px;
+      border: 1px solid var(--border);
+      background-image:
+        linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.92) 28%, rgba(250,247,244,0.42) 55%, rgba(250,247,244,0.04) 100%),
+        url('images/about-hero.png');
+      background-size: cover;
+      background-position: center;
+      display: grid;
+      align-items: center;
+    }
+
+    .about-hero-content {
+      max-width: 560px;
+      padding: 54px 48px;
+      z-index: 1;
+    }
+
+    .about-kicker {
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      font-size: 16px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .about-kicker::after {
+      content: "";
+      width: 62px;
+      height: 2px;
+      background: #e8a2a6;
+      display: inline-block;
+    }
+
+    .about-brand {
+      font-size: 44px;
+      line-height: 1.02;
+      color: var(--primary);
+      margin-bottom: 14px;
+      letter-spacing: 0.4px;
+    }
+
+    .about-tagline {
+      font-size: clamp(34px, 4vw, 44px);
+      color: var(--primary);
+      line-height: 1.1;
+      max-width: 480px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .about-sep {
+      width: 96px;
+      height: 2px;
+      background: #e8a2a6;
+      margin-bottom: 24px;
+    }
+
+    .about-copy {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 470px;
+      color: var(--muted);
+    }
+
     /* GRID SECTIONS */
 
     .split-grid {
@@ -490,6 +566,27 @@
         padding-top: 120px;
       }
 
+      .about-hero-card {
+        min-height: 620px;
+        background-image:
+          linear-gradient(180deg, rgba(250,247,244,0.96) 0%, rgba(250,247,244,0.88) 43%, rgba(250,247,244,0.38) 66%, rgba(250,247,244,0.08) 100%),
+          url('images/about-hero.png');
+        background-position: center;
+      }
+
+      .about-hero-content {
+        max-width: 100%;
+        padding: 38px 26px;
+      }
+
+      .about-copy {
+        font-size: 17px;
+      }
+
+      .about-brand {
+        font-size: 34px;
+      }
+
       section {
         padding: 16px 0 6px;
       }
@@ -544,6 +641,22 @@
         <img src="images/who-we-help.jpg" alt="GCC Expansion">
       </div>
 
+    </div>
+  </section>
+
+  <!-- ABOUT HERO -->
+
+  <section class="about-hero" aria-label="About Saarva Highlight">
+    <div class="container">
+      <div class="about-hero-card">
+        <div class="about-hero-content">
+          <div class="about-kicker">About</div>
+          <h2 class="about-brand">SAARVA</h2>
+          <p class="about-tagline">Your growth partner in the Middle East.</p>
+          <div class="about-sep"></div>
+          <p class="about-copy">We help global consumer brands enter and scale in the GCC with speed, clarity, and confidence through our Distribution as a Service (DaaS) model.</p>
+        </div>
+      </div>
     </div>
   </section>
 
