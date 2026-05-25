@@ -112,10 +112,15 @@
     }
 
     .logo {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--primary);
-      letter-spacing: 2px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 64px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -383,7 +388,9 @@
 
   <nav>
     <div class="container nav-wrapper">
-      <div class="logo">SAARVA</div>
+      <a class="logo" href="#home" aria-label="Saarva Home">
+        <img src="images/saarva-logo.png" alt="Saarva Logo">
+      </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
