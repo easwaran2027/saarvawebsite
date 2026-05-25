@@ -280,6 +280,90 @@
       margin-bottom: 16px;
     }
 
+    .services-content-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service-pillar {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0 10px;
+      text-align: center;
+      box-shadow: none;
+      position: relative;
+    }
+
+    .service-pillar h3 {
+      color: #1f1f1f;
+      margin-bottom: 8px;
+      margin-top: 14px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .service-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #F7EFEF;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      margin-bottom: 10px;
+      border: none;
+    }
+
+    .service-pillar p {
+      font-size: 16px;
+      line-height: 1.45;
+      color: #2b2b2b;
+    }
+
+    .service-step {
+      position: absolute;
+      top: -8px;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-arrow {
+      position: absolute;
+      right: -12px;
+      top: 58px;
+      color: var(--primary);
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .services-bottom-wrap {
+      margin-top: 28px;
+      display: block;
+    }
+
+    .services-left-intro {
+      font-size: 18px;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      max-width: 100%;
+      width: 100%;
+    }
+
     /* TESTIMONIAL */
 
     .testimonial {
@@ -358,6 +442,28 @@
 
       .feature-list {
         grid-template-columns: 1fr;
+      }
+
+      .services-content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-arrow {
+        display: none;
+      }
+
+      .service-icon {
+        width: 92px;
+        height: 92px;
+        font-size: 40px;
+      }
+
+      .service-pillar h3 {
+        font-size: 20px;
+      }
+
+      .service-pillar p {
+        font-size: 15px;
       }
 
       .nav-links {
@@ -529,13 +635,11 @@
     <div class="container">
 
       <h2 style="text-align:center;">What We Do</h2>
-
-      <p style="text-align:center; max-width:700px; margin:auto;">
-        End-to-end GCC market entry and scaling.
+      <p style="text-align:center; max-width:760px; margin:auto;">
+        End-to-end GCC market entry and scaling delivered through one integrated operating model.
       </p>
 
       <div class="process-grid">
-
         <div class="process-card">
           <div class="process-number">01</div>
           <h3>Strategy</h3>
@@ -559,11 +663,50 @@
           <h3>Scale</h3>
           <p>Regional GCC expansion.</p>
         </div>
-
       </div>
 
-      <div style="margin-top:60px;">
-        <img src="images/what-we-do.jpg" style="width:100%; border-radius:28px;" alt="What We Do">
+      <p class="services-left-intro">We handle everything a distributor does-compliance, listing, logistics, marketing, and replenishment-so you can focus on building your brand.</p>
+
+      <div class="services-bottom-wrap">
+        <div>
+          <div class="services-content-grid" aria-label="What We Do Details">
+            <article class="service-pillar">
+              <div class="service-step">01</div>
+              <div class="service-icon">✓</div>
+              <div class="service-arrow">→</div>
+              <h3>Compliance</h3>
+              <p>Product certifications, labeling, and regulatory readiness.</p>
+            </article>
+            <article class="service-pillar">
+              <div class="service-step">02</div>
+              <div class="service-icon">🛒</div>
+              <div class="service-arrow">→</div>
+              <h3>Listing</h3>
+              <p>Placement across key ecommerce and quick-commerce channels.</p>
+            </article>
+            <article class="service-pillar">
+              <div class="service-step">03</div>
+              <div class="service-icon">📦</div>
+              <div class="service-arrow">→</div>
+              <h3>Logistics</h3>
+              <p>Warehousing, fulfillment, and reliable last-mile delivery.</p>
+            </article>
+            <article class="service-pillar">
+              <div class="service-step">04</div>
+              <div class="service-icon">📣</div>
+              <div class="service-arrow">→</div>
+              <h3>Marketing</h3>
+              <p>Performance-led campaigns to drive discovery and demand.</p>
+            </article>
+            <article class="service-pillar">
+              <div class="service-step">05</div>
+              <div class="service-icon">↻</div>
+              <h3>Replenishment</h3>
+              <p>Inventory planning to keep products available and in stock.</p>
+            </article>
+          </div>
+        </div>
+
       </div>
 
     </div>
