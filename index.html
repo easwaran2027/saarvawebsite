@@ -335,6 +335,49 @@
       font-size: 18px;
     }
 
+    .brands-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .brands-media {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 420px;
+      background-image:
+        linear-gradient(180deg, rgba(250,247,244,0.2) 0%, rgba(250,247,244,0.35) 38%, rgba(250,247,244,0.82) 100%),
+        url('images/who-is-this-for.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 1px solid var(--border);
+    }
+
+    .brands-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 28px 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.82) 35%, rgba(255,255,255,0.95) 100%);
+    }
+
+    .brands-overlay h2 {
+      margin-bottom: 12px;
+    }
+
+    .brands-overlay p {
+      max-width: 95%;
+    }
+
+    .brands-boxes .feature-list {
+      margin-top: 0;
+      height: 100%;
+      align-content: center;
+    }
+
     /* PROCESS */
 
     .process-grid {
@@ -549,6 +592,32 @@
 
       .feature-list {
         grid-template-columns: 1fr;
+      }
+
+      .brands-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .brands-media {
+        min-height: 360px;
+      }
+
+      .brands-overlay {
+        padding: 20px 16px;
+      }
+
+      .brands-boxes .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .brands-boxes .feature-card {
+        padding: 16px 12px;
+      }
+
+      .brands-boxes .feature-card h3 {
+        font-size: 16px;
       }
 
       .services-content-grid {
@@ -775,34 +844,33 @@
   <!-- WHO WE WORK WITH -->
 
   <section id="about" style="background: #FFF;">
-    <div class="container split-grid">
+    <div class="container brands-layout">
 
-      <div class="section-image">
-        <img src="images/who-is-this-for.jpg" alt="Consumer Brands">
+      <div class="brands-media" aria-label="Built for Modern Consumer Brands">
+        <div class="brands-overlay">
+          <h2>Built for Modern Consumer Brands</h2>
+          <p>
+            For ambitious brands looking to enter the GCC without building local operations from scratch.
+          </p>
+        </div>
       </div>
 
-      <div>
-        <h2>Built for Modern Consumer Brands</h2>
-
-        <p>
-          For ambitious brands looking to enter the GCC without building local operations from scratch.
-        </p>
-
+      <div class="brands-boxes">
         <div class="feature-list">
           <div class="feature-card">
-            <h3>CPG Brands</h3>
+            <h3>Beauty & Personal Care</h3>
           </div>
 
           <div class="feature-card">
-            <h3>Wellness</h3>
+            <h3>Health & Wellness</h3>
           </div>
 
           <div class="feature-card">
-            <h3>Beauty</h3>
+            <h3>Food & Nutrition</h3>
           </div>
 
           <div class="feature-card">
-            <h3>Consumer Electronics</h3>
+            <h3>Electronics & Small Appliances</h3>
           </div>
         </div>
       </div>
