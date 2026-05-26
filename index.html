@@ -161,7 +161,7 @@
 
     .hero {
       padding-top: 150px;
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       align-items: center;
       background: linear-gradient(to bottom, #FAF7F4, #FFF);
@@ -201,15 +201,15 @@
     }
 
     .about-hero {
-      padding: 26px 0 14px;
+      padding: 0;
     }
 
     .about-hero-card {
       position: relative;
-      border-radius: 30px;
+      border-radius: 0;
       overflow: hidden;
       min-height: 620px;
-      border: 1px solid var(--border);
+      border: none;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.92) 28%, rgba(250,247,244,0.42) 55%, rgba(250,247,244,0.04) 100%),
         url('images/about-hero.png');
@@ -275,6 +275,37 @@
       max-width: 470px;
       color: var(--muted);
     }
+
+    .daas-showcase {
+      padding: 10px 0 0;
+    }
+
+    .daas-hero {
+      min-height: 540px;
+      overflow: hidden;
+      background-image:
+        linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.9) 28%, rgba(250,247,244,0.45) 56%, rgba(250,247,244,0.08) 100%),
+        url('images/why-daas.jpg.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: grid;
+      align-items: center;
+    }
+
+    .daas-hero-content { max-width: 520px; padding: 44px 48px; }
+    .daas-kicker { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 16px; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; }
+    .daas-kicker::after { content: ""; width: 60px; height: 2px; background: #e8a2a6; display: inline-block; }
+    .daas-big { color: var(--primary); font-size: 44px; line-height: 1.05; margin-bottom: 8px; font-weight: 800; }
+    .daas-subtitle { color: var(--text); font-size: 44px; line-height: 1.05; margin-bottom: 14px; font-weight: 600; }
+    .daas-sep { width: 96px; height: 2px; background: #e8a2a6; margin-bottom: 18px; }
+    .daas-copy { color: var(--muted); font-size: 18px; line-height: 1.5; max-width: 420px; }
+    .daas-benefits { background: #fff; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .daas-benefit { text-align: center; padding: 34px 20px 24px; border-right: 1px solid var(--border); }
+    .daas-benefit:last-child { border-right: none; }
+    .daas-icon { width: 104px; height: 104px; border-radius: 50%; background: #F8F1F2; color: var(--primary); margin: 0 auto 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 700; }
+    .daas-benefit h3 { color: #1f1f1f; font-size: 20px; line-height: 1.25; margin-bottom: 10px; }
+    .daas-benefit p { font-size: 16px; line-height: 1.45; color: var(--muted); }
 
     /* GRID SECTIONS */
 
@@ -563,32 +594,66 @@
       }
 
       .hero {
-        padding-top: 120px;
+        padding-top: 132px;
+        min-height: auto;
       }
 
       .about-hero-card {
-        min-height: 620px;
+        min-height: 430px;
         background-image:
-          linear-gradient(180deg, rgba(250,247,244,0.96) 0%, rgba(250,247,244,0.88) 43%, rgba(250,247,244,0.38) 66%, rgba(250,247,244,0.08) 100%),
+          linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.94) 42%, rgba(250,247,244,0.74) 68%, rgba(250,247,244,0.5) 100%),
           url('images/about-hero.png');
-        background-position: center;
+        background-position: 60% center;
+        border-radius: 0;
       }
 
       .about-hero-content {
         max-width: 100%;
-        padding: 38px 26px;
+        padding: 24px 20px;
+      }
+
+      .about-kicker {
+        margin-bottom: 12px;
+      }
+
+      .about-tagline {
+        margin-bottom: 12px;
+      }
+
+      .about-sep {
+        margin-bottom: 14px;
       }
 
       .about-copy {
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 1.45;
+        color: #2a2a2a;
       }
 
       .about-brand {
         font-size: 34px;
       }
 
+      .daas-hero {
+        min-height: 460px;
+        background-image:
+          linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.92) 45%, rgba(250,247,244,0.62) 72%, rgba(250,247,244,0.28) 100%),
+          url('images/why-daas-hero.png');
+        background-position: 56% center;
+      }
+
+      .daas-hero-content { max-width: 100%; padding: 28px 20px; }
+      .daas-big, .daas-subtitle { font-size: 34px; }
+      .daas-copy { font-size: 17px; }
+      .daas-benefits { grid-template-columns: 1fr; }
+      .daas-benefit { border-right: none; border-bottom: 1px solid var(--border); }
+      .daas-benefit:last-child { border-bottom: none; }
+      .daas-icon { width: 88px; height: 88px; font-size: 38px; }
+      .daas-benefit h3 { font-size: 28px; }
+      .daas-benefit p { font-size: 24px; }
+
       section {
-        padding: 16px 0 6px;
+        padding: 8px 0 0;
       }
     }
   </style>
@@ -659,51 +724,54 @@
       </div>
     </div>
   </section>
-
   <!-- WHAT IS DAAS -->
 
-  <section id="daas">
-    <div class="container split-grid">
-
-      <div>
-        <h2>Distribution — Reimagined</h2>
-
-        <p>
-          We handle market entry, compliance, ecommerce, logistics, and growth — without traditional distribution complexity.
-        </p>
-
-        <div class="feature-list">
-
-          <div class="feature-card">
-            <h3>Faster Launch</h3>
-            <p>Go live in weeks.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Asset Light</h3>
-            <p>Scale without infrastructure.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Better Visibility</h3>
-            <p>Modern data-driven execution.</p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Flexible Scaling</h3>
-            <p>Expand when ready.</p>
-          </div>
-
+  <section id="daas" class="daas-showcase" aria-label="Why DaaS">
+    <div class="container">
+      <div class="daas-hero">
+        <div class="daas-hero-content">
+          <div class="daas-kicker">Why</div>
+          <h2 class="daas-big">DAAS?</h2>
+          <p class="daas-subtitle">Distribution as a Service</p>
+          <div class="daas-sep"></div>
+          <p class="daas-copy">A smarter, faster, and more agile way to enter and scale in the GCC.</p>
         </div>
       </div>
 
-      <div class="section-image">
-        <img src="images/why-daas.jpg" alt="Why DaaS">
+      <div class="daas-benefits">
+        <article class="daas-benefit">
+          <div class="daas-icon">?</div>
+          <h3>Faster entry, lower risk</h3>
+          <p>Enter the GCC market quickly with minimal commitment.</p>
+        </article>
+        <article class="daas-benefit">
+          <div class="daas-icon">?</div>
+          <h3>Scale without heavy investment</h3>
+          <p>Pay only for what you need and scale as you grow.</p>
+        </article>
+        <article class="daas-benefit">
+          <div class="daas-icon">$</div>
+          <h3>Pay as you scale</h3>
+          <p>Flexible model aligned with your growth and cash flow.</p>
+        </article>
+        <article class="daas-benefit">
+          <div class="daas-icon">?</div>
+          <h3>Higher margins, better efficiency</h3>
+          <p>Optimized distribution and operations to improve profitability.</p>
+        </article>
+        <article class="daas-benefit">
+          <div class="daas-icon">??</div>
+          <h3>Learn & optimize continuously</h3>
+          <p>Real-time insights to refine strategies and drive better outcomes.</p>
+        </article>
+        <article class="daas-benefit">
+          <div class="daas-icon">?</div>
+          <h3>Agile, flexible & future-ready</h3>
+          <p>Adapt to market changes faster with a lean distribution model.</p>
+        </article>
       </div>
-
     </div>
   </section>
-
   <!-- WHO WE WORK WITH -->
 
   <section id="about" style="background: #FFF;">
@@ -1055,4 +1123,5 @@ Once live:
 
 ===================================================
 -->
+
 
