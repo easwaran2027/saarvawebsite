@@ -164,14 +164,16 @@
       min-height: auto;
       display: flex;
       align-items: center;
-      background: linear-gradient(to bottom, #FAF7F4, #FFF);
+      background-image:
+        linear-gradient(90deg, rgba(250,247,244,0.96) 0%, rgba(250,247,244,0.9) 36%, rgba(250,247,244,0.42) 62%, rgba(250,247,244,0.08) 100%),
+        url('images/who-we-help.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+      display: block;
     }
 
     .hero p {
@@ -284,11 +286,11 @@
     }
 
     .daas-showcase {
-      padding: 10px 0 0;
+      padding: 0;
     }
 
     .daas-hero {
-      min-height: 540px;
+      min-height: 720px;
       overflow: hidden;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.9) 28%, rgba(250,247,244,0.45) 56%, rgba(250,247,244,0.08) 100%),
@@ -296,18 +298,29 @@
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      display: grid;
-      align-items: center;
+      display: flex;
+      align-items: flex-start;
     }
 
-    .daas-hero-content { max-width: 520px; padding: 44px 48px; }
+    .daas-hero-content { max-width: 520px; padding: 0 48px 16px; margin-top: -120px; }
     .daas-kicker { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 16px; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; }
     .daas-kicker::after { content: ""; width: 60px; height: 2px; background: #e8a2a6; display: inline-block; }
     .daas-big { color: var(--primary); font-size: 44px; line-height: 1.05; margin-bottom: 8px; font-weight: 800; }
     .daas-subtitle { color: var(--text); font-size: 44px; line-height: 1.05; margin-bottom: 14px; font-weight: 600; }
     .daas-sep { width: 96px; height: 2px; background: #e8a2a6; margin-bottom: 18px; }
     .daas-copy { color: var(--muted); font-size: 18px; line-height: 1.5; max-width: 420px; }
-    .daas-benefits { background: #fff; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .daas-hero-content > *:first-child { margin-top: 0; }
+    .daas-kicker, .daas-big, .daas-subtitle, .daas-copy { margin-top: 0; }
+    .daas-benefits {
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(2px);
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      margin-top: -300px;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(232, 223, 218, 0.8);
+    }
     .daas-benefit { text-align: center; padding: 34px 20px 24px; border-right: 1px solid var(--border); }
     .daas-benefit:last-child { border-right: none; }
     .daas-icon { width: 104px; height: 104px; border-radius: 50%; background: #F8F1F2; color: var(--primary); margin: 0 auto 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 700; }
@@ -672,6 +685,10 @@
       .hero {
         padding-top: 132px;
         min-height: auto;
+        background-image:
+          linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.93) 48%, rgba(250,247,244,0.58) 75%, rgba(250,247,244,0.24) 100%),
+          url('images/who-we-help.jpg');
+        background-position: 62% center;
       }
 
       .about-hero-card {
@@ -715,17 +732,21 @@
       }
 
       .daas-hero {
-        min-height: 360px;
+        min-height: 420px;
         background-image:
           linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.92) 45%, rgba(250,247,244,0.62) 72%, rgba(250,247,244,0.28) 100%),
           url('images/why-daas-hero.png');
         background-position: 56% center;
       }
 
-      .daas-hero-content { max-width: 100%; padding: 18px 16px; }
+      .daas-hero-content { max-width: 100%; padding: 0 16px 10px; margin-top: -90px; }
       .daas-big, .daas-subtitle { font-size: 34px; }
       .daas-copy { font-size: 17px; }
-      .daas-benefits { grid-template-columns: 1fr; }
+      .daas-benefits {
+        grid-template-columns: 1fr;
+        margin-top: -120px;
+        background: rgba(255,255,255,0.95);
+      }
       .daas-benefit { border-right: none; border-bottom: 1px solid var(--border); padding: 18px 14px 14px; }
       .daas-benefit:last-child { border-bottom: none; }
       .daas-icon { width: 72px; height: 72px; font-size: 30px; margin-bottom: 10px; }
@@ -782,18 +803,14 @@
         </div>
       </div>
 
-      <div class="hero-image">
-        <img src="images/who-we-help.jpg" alt="GCC Expansion">
-      </div>
-
     </div>
   </section>
 
   <!-- ABOUT HERO -->
 
   <section class="about-hero" aria-label="About Saarva Highlight">
-    <div class="container">
-      <div class="about-hero-card">
+    <div class="about-hero-card">
+      <div class="container">
         <div class="about-hero-content">
           <div class="about-kicker">About</div>
           <img class="about-brand-logo" src="images/about-saarva-wordmark.png" alt="Saarva">
@@ -807,18 +824,19 @@
   <!-- WHAT IS DAAS -->
 
   <section id="daas" class="daas-showcase" aria-label="Why DaaS">
-    <div class="container">
       <div class="daas-hero">
-        <div class="daas-hero-content">
-          <div class="daas-kicker">Why</div>
-          <h2 class="daas-big">DAAS?</h2>
-          <p class="daas-subtitle">Distribution as a Service</p>
-          <div class="daas-sep"></div>
-          <p class="daas-copy">A smarter, faster, and more agile way to enter and scale in the GCC.</p>
+        <div class="container">
+          <div class="daas-hero-content">
+            <div class="daas-kicker">Why</div>
+            <h2 class="daas-big">DAAS?</h2>
+            <p class="daas-subtitle">Distribution as a Service</p>
+            <div class="daas-sep"></div>
+            <p class="daas-copy">A smarter, faster, and more agile way to enter and scale in the GCC.</p>
+          </div>
         </div>
       </div>
 
-      <div class="daas-benefits">
+      <div class="daas-benefits container">
         <article class="daas-benefit">
           <div class="daas-icon">⏱</div>
           <h3>Faster entry, lower risk</h3>
@@ -850,7 +868,6 @@
           <p>Adapt to market changes faster with a lean distribution model.</p>
         </article>
       </div>
-    </div>
   </section>
   <!-- WHO WE WORK WITH -->
 
