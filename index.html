@@ -223,7 +223,7 @@
 
     .about-hero-content {
       max-width: 560px;
-      padding: 54px 48px;
+      padding: 28px 48px 54px;
       z-index: 1;
     }
 
@@ -259,7 +259,7 @@
       height: 58px;
       width: auto;
       display: block;
-      margin-bottom: 14px;
+      margin-bottom: 8px;
     }
 
     .about-tagline {
@@ -267,7 +267,7 @@
       color: var(--primary);
       line-height: 1.1;
       max-width: 480px;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       font-weight: 800;
     }
 
@@ -275,7 +275,7 @@
       width: 96px;
       height: 2px;
       background: #e8a2a6;
-      margin-bottom: 24px;
+      margin-bottom: 14px;
     }
 
     .about-copy {
@@ -283,6 +283,43 @@
       line-height: 1.5;
       max-width: 470px;
       color: var(--muted);
+    }
+
+    .about-metrics {
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(2px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: -96px;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(232, 223, 218, 0.8);
+      width: 100%;
+    }
+
+    .about-metric {
+      text-align: center;
+      padding: 26px 18px 18px;
+      border-right: 1px solid var(--border);
+    }
+
+    .about-metric:last-child {
+      border-right: none;
+    }
+
+    .about-metric h3 {
+      color: var(--primary);
+      font-size: 40px;
+      line-height: 1.05;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .about-metric p {
+      color: #1f1f1f;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 500;
     }
 
     .daas-showcase {
@@ -732,6 +769,29 @@
         height: 46px;
       }
 
+      .about-metrics {
+        grid-template-columns: 1fr;
+        margin-top: -36px;
+      }
+
+      .about-metric {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 12px 12px;
+      }
+
+      .about-metric:last-child {
+        border-bottom: none;
+      }
+
+      .about-metric h3 {
+        font-size: 28px;
+      }
+
+      .about-metric p {
+        font-size: 16px;
+      }
+
       .daas-hero {
         min-height: 420px;
         background-image:
@@ -820,6 +880,24 @@
           <p class="about-copy">We help global consumer brands enter and scale in the GCC with speed, clarity, and confidence through our Distribution as a Service (DaaS) model.</p>
         </div>
       </div>
+    </div>
+    <div class="about-metrics">
+      <article class="about-metric">
+        <h3>20+</h3>
+        <p>brands under distribution</p>
+      </article>
+      <article class="about-metric">
+        <h3>$2mn</h3>
+        <p>in GMV FY-2026</p>
+      </article>
+      <article class="about-metric">
+        <h3>Categories</h3>
+        <p>Beauty, Wellness, Electronics</p>
+      </article>
+      <article class="about-metric">
+        <h3>Direct Presence</h3>
+        <p>KSA | UAE<br>Qatar | Oman</p>
+      </article>
     </div>
   </section>
   <!-- WHAT IS DAAS -->
