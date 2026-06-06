@@ -110,10 +110,14 @@
     }
 
     .nav-wrapper {
+      width: 100%;
+      max-width: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
+      padding: 18px 48px;
+      margin: 0;
+      box-sizing: border-box;
     }
 
     .logo {
@@ -211,7 +215,7 @@
       position: relative;
       border-radius: 0;
       overflow: hidden;
-      min-height: 420px;
+      min-height: 560px;
       border: none;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.92) 28%, rgba(250,247,244,0.42) 55%, rgba(250,247,244,0.04) 100%),
@@ -222,9 +226,21 @@
       flex-direction: column;
     }
 
+    .about-hero-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 90px;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(250,247,244,0) 0%, rgba(250,247,244,0.72) 100%);
+      z-index: 0;
+    }
+
     .about-hero-content {
       max-width: 560px;
-      padding: 56px 0 40px;
+      padding: 56px 0 28px;
       margin-top: 0;
       z-index: 1;
     }
@@ -294,7 +310,7 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       width: 100%;
-      margin: 0 0 36px;
+      margin: 18px 0 0;
       position: relative;
       z-index: 2;
     }
@@ -331,7 +347,18 @@
     }
 
     .daas-showcase {
-      padding: 24px 0 0;
+      padding: 0;
+      margin-top: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .daas-showcase::before {
+      content: "";
+      display: block;
+      height: 10px;
+      margin-bottom: -8px;
+      background: linear-gradient(180deg, rgba(250,247,244,0.72) 0%, rgba(250,247,244,0) 100%);
     }
 
     .daas-hero {
@@ -348,7 +375,7 @@
       align-items: flex-start;
     }
 
-    .daas-hero-content { max-width: 520px; padding: 56px 0 16px; margin-top: 0; }
+    .daas-hero-content { max-width: 760px; padding: 56px 0 16px; margin-top: 0; }
     .daas-kicker { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 16px; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; }
     .daas-kicker::after { content: ""; width: 60px; height: 2px; background: #e8a2a6; display: inline-block; }
     .daas-big { color: var(--primary); font-size: 44px; line-height: 1.05; margin-bottom: 8px; font-weight: 800; }
@@ -364,7 +391,7 @@
       gap: 14px;
       width: 100%;
       padding: 0 48px 12px;
-      margin: -210px 0 0;
+      margin: -140px 0 0;
       box-sizing: border-box;
       position: relative;
       z-index: 2;
@@ -411,6 +438,18 @@
       font-size: 18px;
     }
 
+    #brands {
+      position: relative;
+      padding-top: 20px;
+      background-image:
+        linear-gradient(90deg, rgba(250,247,244,0.86) 0%, rgba(250,247,244,0.72) 38%, rgba(250,247,244,0.2) 64%, rgba(250,247,244,0.08) 100%),
+        url('images/who-is-this-for.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
     .brands-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -423,35 +462,40 @@
       border-radius: 24px;
       overflow: hidden;
       min-height: 420px;
-      background-image:
-        linear-gradient(180deg, rgba(250,247,244,0.2) 0%, rgba(250,247,244,0.35) 38%, rgba(250,247,244,0.82) 100%),
-        url('images/who-is-this-for.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 1px solid var(--border);
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
 
     .brands-overlay {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
-      padding: 28px 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.82) 35%, rgba(255,255,255,0.95) 100%);
+      top: 0;
+      bottom: auto;
+      padding: 0 24px 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.0) 100%);
     }
 
     .brands-overlay h2 {
-      margin-bottom: 12px;
+      margin-bottom: 4px;
+      max-width: 760px;
     }
 
     .brands-overlay p {
-      max-width: 95%;
+      max-width: 760px;
+      margin-top: 0;
     }
 
     .brands-boxes .feature-list {
       margin-top: 0;
       height: 100%;
       align-content: center;
+    }
+
+    .brands-boxes .feature-card {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(2px);
     }
 
     /* PROCESS */
@@ -465,23 +509,10 @@
 
     .process-card {
       background: white;
-      padding: 32px 24px;
+      padding: 14px 20px;
       border-radius: 24px;
       border: 1px solid var(--border);
       text-align: center;
-    }
-
-    .process-number {
-      width: 50px;
-      height: 50px;
-      background: var(--soft-bg);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-weight: 700;
-      margin: 0 auto 20px;
     }
 
     /* WHY DAAS */
@@ -554,6 +585,7 @@
 
     .service-step {
       position: absolute;
+      display: none;
       top: -8px;
       left: 20px;
       width: 30px;
@@ -698,11 +730,11 @@
     }
 
     footer {
-      padding: 40px 0;
+      padding: 12px 0;
       text-align: center;
-      border-top: 1px solid var(--border);
+      border-top: none;
       color: var(--muted);
-      background: #fff;
+      background: transparent;
     }
 
     /* MOBILE */
@@ -740,8 +772,12 @@
         min-height: 360px;
       }
 
+      #brands {
+        background-position: 55% center;
+      }
+
       .brands-overlay {
-        padding: 20px 16px;
+        padding: 0 16px 10px;
       }
 
       .brands-boxes .feature-list {
@@ -887,20 +923,29 @@
         background-position: 56% center;
       }
 
+      .daas-showcase {
+        margin-top: -18px;
+      }
+
+      .daas-showcase::before {
+        height: 36px;
+        margin-bottom: -28px;
+      }
+
       .daas-hero-content { max-width: 100%; padding: 32px 0 10px; margin-top: 0; }
       .daas-big, .daas-subtitle { font-size: 34px; }
       .daas-copy { font-size: 17px; }
       .daas-benefits {
         grid-template-columns: 1fr;
         width: 100%;
-        margin: -64px 0 0;
+        margin: -84px 0 0;
         background: transparent;
         gap: 10px;
         padding: 0 16px 12px;
       }
       .daas-benefit { padding: 16px 14px 12px; border-radius: 20px; }
       .daas-benefit:last-child { border-bottom: none; }
-      .daas-icon { width: 72px; height: 72px; font-size: 30px; margin-bottom: 10px; }
+      .daas-icon { width: 78px; height: 78px; font-size: 32px; margin-bottom: 14px; }
       .daas-benefit h3 { font-size: 16px; margin-bottom: 0; }
       .daas-benefit p { display: none; }
 
@@ -925,8 +970,8 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about-saarva">About</a></li>
-        <li><a href="#daas">DaaS</a></li>
+        <li><a href="#about-saarva">About Us</a></li>
+        <li><a href="#daas">Why DaaS</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#why">Why GCC</a></li>
         <li><a href="#contact">Contact us</a></li>
@@ -1044,12 +1089,12 @@
   </section>
   <!-- WHO WE WORK WITH -->
 
-  <section id="brands" style="background: #FFF;">
+  <section id="brands">
     <div class="container brands-layout">
 
-      <div class="brands-media" aria-label="Built for Modern Consumer Brands">
+      <div class="brands-media" aria-label="For brands scaling globally">
         <div class="brands-overlay">
-          <h2>Built for Modern Consumer Brands</h2>
+          <h2>For brands scaling globally</h2>
           <p>
             For ambitious brands looking to enter the GCC without building local operations from scratch.
           </p>
@@ -1091,25 +1136,21 @@
 
       <div class="process-grid">
         <div class="process-card">
-          <div class="process-number">01</div>
           <h3>Strategy</h3>
           <p>Market entry & GTM planning.</p>
         </div>
 
         <div class="process-card">
-          <div class="process-number">02</div>
           <h3>Setup</h3>
           <p>Compliance & operations.</p>
         </div>
 
         <div class="process-card">
-          <div class="process-number">03</div>
           <h3>Launch</h3>
           <p>Ecommerce & logistics.</p>
         </div>
 
         <div class="process-card">
-          <div class="process-number">04</div>
           <h3>Scale</h3>
           <p>Regional GCC expansion.</p>
         </div>
