@@ -37,9 +37,10 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1280px;
-      margin: auto;
+      width: 100%;
+      max-width: none;
+      padding: 0 48px;
+      margin: 0 auto;
     }
 
     section {
@@ -203,27 +204,28 @@
     }
 
     .about-hero {
-      padding: 0;
+      padding: 0 0 24px;
     }
 
     .about-hero-card {
       position: relative;
       border-radius: 0;
       overflow: hidden;
-      min-height: 620px;
+      min-height: 420px;
       border: none;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.92) 28%, rgba(250,247,244,0.42) 55%, rgba(250,247,244,0.04) 100%),
-        url('images/about-hero.png');
+      url('images/about-hero.png');
       background-size: cover;
       background-position: center;
-      display: grid;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
 
     .about-hero-content {
       max-width: 560px;
-      padding: 8px 48px 54px;
+      padding: 56px 0 40px;
+      margin-top: 0;
       z-index: 1;
     }
 
@@ -286,21 +288,23 @@
     }
 
     .about-metrics {
-      background: rgba(255,255,255,0.93);
-      backdrop-filter: blur(2px);
+      background: transparent;
+      backdrop-filter: none;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-top: -96px;
+      gap: 14px;
+      width: 100%;
+      margin: 0 0 36px;
       position: relative;
       z-index: 2;
-      border-top: 1px solid rgba(232, 223, 218, 0.8);
-      width: 100%;
     }
 
     .about-metric {
       text-align: center;
       padding: 26px 18px 18px;
-      border-right: 1px solid var(--border);
+      border: none;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.58);
     }
 
     .about-metric:last-child {
@@ -309,10 +313,10 @@
 
     .about-metric h3 {
       color: var(--primary);
-      font-size: 40px;
+      font-size: 18px;
       line-height: 1.05;
       margin-bottom: 8px;
-      font-weight: 800;
+      font-weight: 500;
     }
 
     .about-metric p {
@@ -322,12 +326,16 @@
       font-weight: 500;
     }
 
+    .about-metric p.nowrap {
+      white-space: nowrap;
+    }
+
     .daas-showcase {
-      padding: 0;
+      padding: 24px 0 0;
     }
 
     .daas-hero {
-      min-height: 720px;
+      min-height: 640px;
       overflow: hidden;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.9) 28%, rgba(250,247,244,0.45) 56%, rgba(250,247,244,0.08) 100%),
@@ -336,10 +344,11 @@
       background-position: center center;
       background-repeat: no-repeat;
       display: flex;
+      flex-direction: column;
       align-items: flex-start;
     }
 
-    .daas-hero-content { max-width: 520px; padding: 0 48px 16px; margin-top: -340px; }
+    .daas-hero-content { max-width: 520px; padding: 56px 0 16px; margin-top: 0; }
     .daas-kicker { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 16px; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; }
     .daas-kicker::after { content: ""; width: 60px; height: 2px; background: #e8a2a6; display: inline-block; }
     .daas-big { color: var(--primary); font-size: 44px; line-height: 1.05; margin-bottom: 8px; font-weight: 800; }
@@ -349,21 +358,30 @@
     .daas-hero-content > *:first-child { margin-top: 0; }
     .daas-kicker, .daas-big, .daas-subtitle, .daas-copy { margin-top: 0; }
     .daas-benefits {
-      background: rgba(255,255,255,0.93);
-      backdrop-filter: blur(2px);
+      background: transparent;
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
-      margin-top: -360px;
+      gap: 14px;
+      width: 100%;
+      padding: 0 48px 12px;
+      margin: -210px 0 0;
+      box-sizing: border-box;
       position: relative;
       z-index: 2;
-      border-top: 1px solid rgba(232, 223, 218, 0.8);
-      width: 100%;
     }
-    .daas-benefit { text-align: center; padding: 34px 20px 24px; border-right: 1px solid var(--border); }
+    .daas-benefit {
+      text-align: center;
+      padding: 20px 16px 16px;
+      border: none;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.58);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
     .daas-benefit:last-child { border-right: none; }
-    .daas-icon { width: 104px; height: 104px; border-radius: 50%; background: #F8F1F2; color: var(--primary); margin: 0 auto 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 700; }
-    .daas-benefit h3 { color: #1f1f1f; font-size: 18px; line-height: 1.25; margin-bottom: 8px; }
-    .daas-benefit p { font-size: 18px; line-height: 1.4; color: var(--muted); }
+    .daas-icon { width: 78px; height: 78px; border-radius: 50%; background: #F8F1F2; color: var(--primary); margin: 0 auto 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; }
+    .daas-benefit h3 { color: #1f1f1f; font-size: 16px; line-height: 1.25; margin-bottom: 8px; }
+    .daas-benefit p { display: none; }
 
     /* GRID SECTIONS */
 
@@ -575,22 +593,83 @@
     /* TESTIMONIAL */
 
     .testimonial {
-      background: white;
-      padding: 40px;
-      border-radius: 30px;
-      border: 1px solid var(--border);
-      margin-top: 40px;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      margin-top: 24px;
+      overflow: hidden;
     }
 
-    .testimonial p {
-      font-size: 24px;
-      line-height: 1.5;
-      margin-bottom: 20px;
+    .logo-marquee {
+      margin-top: 28px;
+      overflow: hidden;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .logo-marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 22px;
+      animation: logo-scroll 42s linear infinite;
+    }
+
+    .logo-tile {
+      flex: 0 0 auto;
+      width: 210px;
+      height: 120px;
+      background: #fff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      border: 1px solid rgba(232,223,218,0.8);
+    }
+
+    .logo-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transform: scale(1.15);
+      transform-origin: center center;
+    }
+
+    .logo-tile.wide img {
+      width: 92%;
+    }
+
+    .logo-tile.tall img {
+      width: 78%;
+    }
+
+    @keyframes logo-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     /* CONTACT */
 
-    .contact-box {
+    .form-embed {
+      margin-top: 28px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
+
+    .google-form {
+      display: block;
+      width: 100%;
+      height: 504px;
+      border: 0;
+    }    .contact-box {
       background: white;
       padding: 50px;
       border-radius: 30px;
@@ -670,6 +749,10 @@
         gap: 12px;
       }
 
+      .brands-media {
+        display: none;
+      }
+
       .brands-boxes .feature-card {
         padding: 16px 12px;
       }
@@ -730,7 +813,7 @@
       }
 
       .about-hero-card {
-        min-height: 430px;
+        min-height: 360px;
         background-image:
           linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.94) 42%, rgba(250,247,244,0.74) 68%, rgba(250,247,244,0.5) 100%),
           url('images/about-hero.png');
@@ -740,7 +823,8 @@
 
       .about-hero-content {
         max-width: 100%;
-        padding: 8px 20px 24px;
+        padding: 36px 0 20px;
+        margin-top: 0;
       }
 
       .about-kicker {
@@ -771,13 +855,16 @@
 
       .about-metrics {
         grid-template-columns: 1fr;
-        margin-top: -36px;
+        width: 100%;
+        margin: 8px 0 24px;
+        background: transparent;
+        max-width: none;
+        gap: 10px;
       }
 
       .about-metric {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
         padding: 16px 12px 12px;
+        border-radius: 20px;
       }
 
       .about-metric:last-child {
@@ -785,37 +872,44 @@
       }
 
       .about-metric h3 {
-        font-size: 28px;
+        font-size: 18px;
       }
 
       .about-metric p {
         font-size: 16px;
       }
 
-      .daas-hero {
-        min-height: 420px;
+      .daas-hero { 
+        min-height: 360px;
         background-image:
           linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.92) 45%, rgba(250,247,244,0.62) 72%, rgba(250,247,244,0.28) 100%),
           url('images/why-daas-hero.png');
         background-position: 56% center;
       }
 
-      .daas-hero-content { max-width: 100%; padding: 0 16px 10px; margin-top: -130px; }
+      .daas-hero-content { max-width: 100%; padding: 32px 0 10px; margin-top: 0; }
       .daas-big, .daas-subtitle { font-size: 34px; }
       .daas-copy { font-size: 17px; }
       .daas-benefits {
         grid-template-columns: 1fr;
-        margin-top: -120px;
-        background: rgba(255,255,255,0.95);
+        width: 100%;
+        margin: -64px 0 0;
+        background: transparent;
+        gap: 10px;
+        padding: 0 16px 12px;
       }
-      .daas-benefit { border-right: none; border-bottom: 1px solid var(--border); padding: 18px 14px 14px; }
+      .daas-benefit { padding: 16px 14px 12px; border-radius: 20px; }
       .daas-benefit:last-child { border-bottom: none; }
       .daas-icon { width: 72px; height: 72px; font-size: 30px; margin-bottom: 10px; }
-      .daas-benefit h3 { font-size: 18px; margin-bottom: 6px; }
-      .daas-benefit p { font-size: 16px; line-height: 1.35; }
+      .daas-benefit h3 { font-size: 16px; margin-bottom: 0; }
+      .daas-benefit p { display: none; }
 
       section {
         padding: 8px 0 0;
+      }
+
+      .container {
+        padding: 0 16px;
       }
     }
   </style>
@@ -879,25 +973,25 @@
           <div class="about-sep"></div>
           <p class="about-copy">We help global consumer brands enter and scale in the GCC with speed, clarity, and confidence through our Distribution as a Service (DaaS) model.</p>
         </div>
+        <div class="about-metrics">
+          <article class="about-metric">
+            <h3>20+</h3>
+            <p>brands under distribution</p>
+          </article>
+          <article class="about-metric">
+            <h3>$2mn</h3>
+            <p>in GMV FY-2026</p>
+          </article>
+          <article class="about-metric">
+            <h3>Categories</h3>
+            <p>Beauty, Wellness, Electronics</p>
+          </article>
+          <article class="about-metric">
+            <h3>Countries</h3>
+            <p class="nowrap">KSA | UAE | Qatar | Oman</p>
+          </article>
+        </div>
       </div>
-    </div>
-    <div class="about-metrics">
-      <article class="about-metric">
-        <h3>20+</h3>
-        <p>brands under distribution</p>
-      </article>
-      <article class="about-metric">
-        <h3>$2mn</h3>
-        <p>in GMV FY-2026</p>
-      </article>
-      <article class="about-metric">
-        <h3>Categories</h3>
-        <p>Beauty, Wellness, Electronics</p>
-      </article>
-      <article class="about-metric">
-        <h3>Direct Presence</h3>
-        <p>KSA | UAE<br>Qatar | Oman</p>
-      </article>
     </div>
   </section>
   <!-- WHAT IS DAAS -->
@@ -990,8 +1084,8 @@
   <section id="services">
     <div class="container">
 
-      <h2 style="text-align:center;">What We Do</h2>
-      <p style="text-align:center; max-width:760px; margin:auto;">
+      <h2>What We Do</h2>
+      <p style="max-width:760px;">
         End-to-end GCC market entry and scaling delivered through one integrated operating model.
       </p>
 
@@ -1111,54 +1205,9 @@
       </div>
 
     </div>
-  </section>
+  </section>  <!-- TESTIMONIAL -->
 
-  <!-- TESTIMONIAL -->
-
-  <section>
-    <div class="container">
-
-      <h2 style="text-align:center;">Trusted by Growing Brands</h2>
-
-      <div class="testimonial">
-        <p>
-          “Saarva helped us enter the GCC with speed, clarity, and strong execution.”
-        </p>
-
-        <strong>— Brand Partner</strong>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-    <div class="container">
-
-      <h2 style="text-align:center;">Ready to Enter the GCC?</h2>
-
-      <p style="text-align:center; max-width:700px; margin:auto;">
-        Let’s build your Middle East expansion strategy.
-      </p>
-
-      <div class="contact-box">
-
-        <form>
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Email Address">
-          <input type="text" placeholder="Brand Name">
-          <textarea placeholder="Tell us about your business"></textarea>
-
-          <button class="btn">Submit</button>
-        </form>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <section>    <div class="container">      <h2>Brands growing with Saarva</h2>      <div class="logo-marquee" aria-label="Brands we help scale">        <div class="logo-marquee-track">          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/asaya logo.png" alt="Asaya"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/axis y logo.png" alt="Axis-Y"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/barosi logo.jpg" alt="Barosi"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/celimax logo.png" alt="Celimax"></div>          <div class="logo-tile tall"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Deconstruct-logo.png" alt="Deconstruct"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Dr Althea logo.png" alt="Dr Althea"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Dr melaxin logo.jpg" alt="Dr Melaxin"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/elave logo.png" alt="Elave"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/eqqualberry logo.png" alt="Eqqualberry"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/hair originals logo.png" alt="Hair Originals"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/life & pursuits logo.png" alt="Life & Pursuits"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/minimalist logo.png" alt="Minimalist"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Philips logo.png" alt="Philips"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/SKIN1004 Logo.png" alt="SKIN1004"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/asaya logo.png" alt="Asaya"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/axis y logo.png" alt="Axis-Y"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/barosi logo.jpg" alt="Barosi"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/celimax logo.png" alt="Celimax"></div>          <div class="logo-tile tall"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Deconstruct-logo.png" alt="Deconstruct"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Dr Althea logo.png" alt="Dr Althea"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Dr melaxin logo.jpg" alt="Dr Melaxin"></div>          <div class="logo-tile"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/elave logo.png" alt="Elave"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/eqqualberry logo.png" alt="Eqqualberry"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/hair originals logo.png" alt="Hair Originals"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/life & pursuits logo.png" alt="Life & Pursuits"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/minimalist logo.png" alt="Minimalist"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/Philips logo.png" alt="Philips"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Brands we distribute/SKIN1004 Logo.png" alt="SKIN1004"></div>        </div>      </div>    </div>  </section>  <!-- RETAIL PARTNERS -->  <section>    <div class="container">      <h2>Our retail partners</h2>      <div class="logo-marquee" aria-label="Retail partners">        <div class="logo-marquee-track">          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/amazon logo.png" alt="Amazon"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/noon logo.jpg" alt="Noon"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/trendyol logo.png" alt="Trendyol"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/talabat logo.png" alt="Talabat"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/amazon now.png" alt="Amazon Now"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/beautytribe logo.png" alt="Beauty Tribe"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/faces logo 2.png" alt="Faces"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/impulse logo.png" alt="Impulse"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/menahub qatar logo.jpg" alt="MenaHub Qatar"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/noon minutes.jpg" alt="Noon Minutes"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/secret skin logo.png" alt="Secret Skin"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/Snoonu-Logo-ENG.png" alt="Snoonu"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/wee logo.jpg" alt="Wee"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/xpressions logo.jpg" alt="Xpressions"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/amazon logo.png" alt="Amazon"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/noon logo.jpg" alt="Noon"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/trendyol logo.png" alt="Trendyol"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/talabat logo.png" alt="Talabat"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/amazon now.png" alt="Amazon Now"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/beautytribe logo.png" alt="Beauty Tribe"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/faces logo 2.png" alt="Faces"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/impulse logo.png" alt="Impulse"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/menahub qatar logo.jpg" alt="MenaHub Qatar"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/noon minutes.jpg" alt="Noon Minutes"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/secret skin logo.png" alt="Secret Skin"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/Snoonu-Logo-ENG.png" alt="Snoonu"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/wee logo.jpg" alt="Wee"></div>          <div class="logo-tile wide"><img src="C:/Users/easwa/OneDrive/Desktop/Saarva/DaaS/Saarva DaaS Website/Retail partners/xpressions logo.jpg" alt="Xpressions"></div>        </div>      </div>    </div>  </section>  <!-- CONTACT -->`r`n`r`n  <section id="contact">`r`n    <div class="container">`r`n      <h2>Ready to Enter the GCC?</h2>`r`n`r`n      <div class="form-embed">`r`n        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd2tDaOaEBFRARNOFIYfPNY8-BfL8bCgKpHDh7L-9aeE34alA/viewform?embedded=true" title="Saarva Contact Form" loading="lazy">Loading�</iframe>`r`n      </div>`r`n    </div>`r`n  </section>`r`n`r`n  <!-- FOOTER -->
 
   <footer>
     © 2026 SAARVA. Distribution as a Service.
@@ -1294,3 +1343,8 @@ Once live:
 
 ===================================================
 -->
+
+
+
+
+
