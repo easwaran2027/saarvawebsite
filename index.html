@@ -44,7 +44,7 @@
     }
 
     section {
-      padding: 22px 0 8px;
+      padding: 44px 0;
     }
 
     section[id] {
@@ -208,22 +208,21 @@
     }
 
     .about-hero {
-      padding: 0 0 24px;
+      padding: 0;
     }
 
     .about-hero-card {
       position: relative;
       border-radius: 0;
       overflow: hidden;
-      min-height: 560px;
+      min-height: 0;
       border: none;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.92) 28%, rgba(250,247,244,0.42) 55%, rgba(250,247,244,0.04) 100%),
       url('images/about-hero.png');
       background-size: cover;
       background-position: center;
-      display: flex;
-      flex-direction: column;
+      display: block;
     }
 
     .about-hero-card::after {
@@ -232,7 +231,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 90px;
+      height: 56px;
       pointer-events: none;
       background: linear-gradient(180deg, rgba(250,247,244,0) 0%, rgba(250,247,244,0.72) 100%);
       z-index: 0;
@@ -240,7 +239,7 @@
 
     .about-hero-content {
       max-width: 560px;
-      padding: 56px 0 28px;
+      padding: 48px 0 20px;
       margin-top: 0;
       z-index: 1;
     }
@@ -310,7 +309,7 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       width: 100%;
-      margin: 18px 0 0;
+      margin: 22px 0 36px;
       position: relative;
       z-index: 2;
     }
@@ -354,15 +353,11 @@
     }
 
     .daas-showcase::before {
-      content: "";
-      display: block;
-      height: 10px;
-      margin-bottom: -8px;
-      background: linear-gradient(180deg, rgba(250,247,244,0.72) 0%, rgba(250,247,244,0) 100%);
+      content: none;
     }
 
     .daas-hero {
-      min-height: 640px;
+      min-height: 0;
       overflow: hidden;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.97) 0%, rgba(250,247,244,0.9) 28%, rgba(250,247,244,0.45) 56%, rgba(250,247,244,0.08) 100%),
@@ -370,12 +365,10 @@
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: block;
     }
 
-    .daas-hero-content { max-width: 760px; padding: 56px 0 16px; margin-top: 0; }
+    .daas-hero-content { max-width: 760px; padding: 48px 0 12px; margin-top: 0; }
     .daas-kicker { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 16px; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; }
     .daas-kicker::after { content: ""; width: 60px; height: 2px; background: #e8a2a6; display: inline-block; }
     .daas-big { color: var(--primary); font-size: 44px; line-height: 1.05; margin-bottom: 8px; font-weight: 800; }
@@ -390,8 +383,8 @@
       grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 14px;
       width: 100%;
-      padding: 0 48px 12px;
-      margin: -140px 0 0;
+      padding: 0 0 40px;
+      margin: 28px 0 0;
       box-sizing: border-box;
       position: relative;
       z-index: 2;
@@ -454,7 +447,7 @@
 
     #brands {
       position: relative;
-      padding-top: 20px;
+      padding: 48px 0;
       background-image:
         linear-gradient(90deg, rgba(250,247,244,0.86) 0%, rgba(250,247,244,0.72) 38%, rgba(250,247,244,0.2) 64%, rgba(250,247,244,0.08) 100%),
         url('images/who-is-this-for.jpg');
@@ -468,27 +461,23 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 32px;
-      align-items: stretch;
+      align-items: center;
     }
 
     .brands-media {
       position: relative;
       border-radius: 24px;
       overflow: hidden;
-      min-height: 420px;
+      min-height: 0;
       background: transparent;
       border: none;
       box-shadow: none;
     }
 
     .brands-overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: auto;
-      padding: 0 24px 12px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.0) 100%);
+      position: static;
+      padding: 0;
+      background: transparent;
     }
 
     .brands-overlay h2 {
@@ -518,7 +507,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
-      margin-top: 40px;
+      margin-top: 28px;
     }
 
     .process-card {
@@ -876,7 +865,7 @@
       }
 
       .about-hero-card {
-        min-height: 360px;
+        min-height: 0;
         background-image:
           linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.94) 42%, rgba(250,247,244,0.74) 68%, rgba(250,247,244,0.5) 100%),
           url('images/about-hero.png');
@@ -886,7 +875,7 @@
 
       .about-hero-content {
         max-width: 100%;
-        padding: 36px 0 20px;
+        padding: 32px 0 18px;
         margin-top: 0;
       }
 
@@ -919,7 +908,7 @@
       .about-metrics {
         grid-template-columns: 1fr;
         width: 100%;
-        margin: 8px 0 24px;
+        margin: 14px 0 28px;
         background: transparent;
         max-width: none;
         gap: 10px;
@@ -942,21 +931,12 @@
         font-size: 16px;
       }
 
-      .daas-hero { 
-        min-height: 360px;
+      .daas-hero {
+        min-height: 0;
         background-image:
           linear-gradient(180deg, rgba(250,247,244,0.98) 0%, rgba(250,247,244,0.92) 45%, rgba(250,247,244,0.62) 72%, rgba(250,247,244,0.28) 100%),
           url('images/why-daas-hero.png');
         background-position: 56% center;
-      }
-
-      .daas-showcase {
-        margin-top: -18px;
-      }
-
-      .daas-showcase::before {
-        height: 36px;
-        margin-bottom: -28px;
       }
 
       .daas-hero-content { max-width: 100%; padding: 32px 0 10px; margin-top: 0; }
@@ -965,10 +945,10 @@
       .daas-benefits {
         grid-template-columns: 1fr;
         width: 100%;
-        margin: -84px 0 0;
+        margin: 18px 0 0;
         background: transparent;
         gap: 10px;
-        padding: 0 16px 12px;
+        padding: 0 0 28px;
       }
       .daas-benefit { padding: 16px 14px 12px; border-radius: 20px; }
       .daas-benefit:last-child { border-bottom: none; }
@@ -977,7 +957,7 @@
       .daas-benefit p { display: none; }
 
       section {
-        padding: 8px 0 0;
+        padding: 32px 0;
       }
 
       .container {
