@@ -485,9 +485,33 @@
       background: transparent;
     }
 
-    .brands-overlay h2 {
-      margin-bottom: 4px;
+    .brands-kicker {
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brands-kicker::after {
+      content: "";
+      width: 60px;
+      height: 2px;
+      background: #e8a2a6;
+      display: inline-block;
+    }
+
+    .brands-big {
+      color: var(--primary);
+      font-size: 44px;
+      line-height: 1.05;
+      margin-bottom: 14px;
       max-width: 760px;
+      font-weight: 800;
     }
 
     .brands-overlay p {
@@ -777,10 +801,14 @@
         padding: 12px 16px 12px;
       }
 
-      .brands-overlay h2 {
+      .brands-big {
         margin-bottom: 4px;
-        font-size: 26px;
+        font-size: 34px;
         line-height: 1.1;
+      }
+
+      .brands-kicker {
+        margin-bottom: 10px;
       }
 
       .brands-overlay p {
@@ -1094,7 +1122,8 @@
 
       <div class="brands-media" aria-label="For brands scaling globally">
         <div class="brands-overlay">
-          <h2>For brands scaling globally</h2>
+          <div class="brands-kicker">For</div>
+          <h2 class="brands-big">Brands scaling globally</h2>
           <p>
             For ambitious brands looking to enter the GCC without building local operations from scratch.
           </p>
@@ -1318,7 +1347,7 @@
 
   <section id="contact">
     <div class="container">
-      <h2>Ready to Enter the GCC?</h2>
+      <h2>Ready to enter the GCC?</h2>
 
       <div class="form-embed">
         <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd2tDaOaEBFRARNOFIYfPNY8-BfL8bCgKpHDh7L-9aeE34alA/viewform?embedded=true" title="Saarva Contact Form" loading="lazy">Loading...</iframe>
