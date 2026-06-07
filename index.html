@@ -80,6 +80,11 @@
       font-size: 18px;
     }
 
+    .section-description {
+      max-width: 760px;
+      margin: -12px 0 0;
+    }
+
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -467,7 +472,7 @@
     .brands-media {
       position: relative;
       border-radius: 24px;
-      overflow: hidden;
+      overflow: visible;
       min-height: 0;
       background: transparent;
       border: none;
@@ -476,7 +481,7 @@
 
     .brands-overlay {
       position: static;
-      padding: 0;
+      padding: 0 0 0 2px;
       background: transparent;
     }
 
@@ -488,6 +493,12 @@
     .brands-overlay p {
       max-width: 760px;
       margin-top: 0;
+    }
+
+    .about-hero-content,
+    .daas-hero-content,
+    .brands-overlay {
+      padding-left: 4px;
     }
 
     .brands-boxes .feature-list {
@@ -1125,22 +1136,22 @@
       <div class="process-grid">
         <div class="process-card">
           <h3>Strategy</h3>
-          <p>Market entry & GTM planning.</p>
+          <p>Market entry & GTM planning</p>
         </div>
 
         <div class="process-card">
           <h3>Setup</h3>
-          <p>Compliance & operations.</p>
+          <p>Compliance & operations</p>
         </div>
 
         <div class="process-card">
           <h3>Launch</h3>
-          <p>Ecommerce & logistics.</p>
+          <p>Ecommerce & logistics</p>
         </div>
 
         <div class="process-card">
           <h3>Scale</h3>
-          <p>Regional GCC expansion.</p>
+          <p>Regional GCC expansion</p>
         </div>
       </div>
 
@@ -1231,6 +1242,7 @@
   <section>
     <div class="container">
       <h2>Brands growing with Saarva</h2>
+      <p class="section-description">We work with emerging and established brands across sectors.</p>
       <div class="logo-marquee" aria-label="Brands we help scale">
         <div class="logo-marquee-track">          <div class="logo-tile wide"><img src="images/brands/asaya-logo.png" alt="Asaya"></div>
           <div class="logo-tile wide"><img src="images/brands/axis-y-logo.png" alt="Axis-Y"></div>
